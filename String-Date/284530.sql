@@ -1,0 +1,7 @@
+-- 코드를 작성해주세요
+-- PM2.5를 ALIAS시 ""로 문자열화 필요. 문자열화 하지 않을 경우 .5를 잘못 인식하여 문법 오류 발생.
+SELECT YEAR(YM) AS YEAR, ROUND(AVG(PM_VAL1), 2) AS "PM10", ROUND(AVG(PM_VAL2), 2) AS "PM2.5"
+FROM AIR_POLLUTION
+WHERE LOCATION1 = "경기도" AND LOCATION2 = "수원"
+GROUP BY YEAR
+ORDER BY YEAR;
